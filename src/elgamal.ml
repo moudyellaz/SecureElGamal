@@ -115,8 +115,28 @@ let keygen gr =
 
 (* Encrypt a message [m] with the public key [pk]: c = (u,v) = (g^r mod p, m*g^r mod p)  *)
 
+(*
+let unsafe_encrypt pk m =
+*)
+
+(*
+let encrypt_check pk m =
+*)
+
+
 (* Decrypt a ciphertext [c] with the secret key [sk]: m = v * u^(-x)  *)
 
+(*
+let unsafe_decrypt sk (u,v) = 
+*)
+
+(*
+let decrypt_check pk m =
+*)
+
+
 (* Add an encoding and decoding technique to make sure that the selected messaged are in the right group *)
+
+
 
 
