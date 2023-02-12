@@ -102,11 +102,21 @@ exception BadElem
 
 let keygen gr =
   let pbits = gr.pbits in
-  let p = gr.p in 
-  let q = q gr.p in
-  let g = gr.g in 
-  let x = sample_le (pbits - 1) q in
-  { skey = { group = gr; key = x};
-    pkey = { group = gr; key = Z.powm g x p }; }
+  let p = gr.p in                                       (* p prime *)
+  let q = q gr.p in                                     (* q prime *)
+  let g = gr.g in                                       (* g generator *)
+  let x = sample_le (pbits - 1) q in                    (* choose x /in q *)
+  { skey = { group = gr; key = x};                      (* x: private key *)
+    pkey = { group = gr; key = Z.powm g x p }; }        (* y: public key as y=g^x mod p *)
 
 (* --------------------------------------------------------------------------- *)
+
+(* TO DO with the interviewer *)
+
+(* Encrypt a message [m] with the public key [pk]: c = (u,v) = (g^r mod p, m*g^r mod p)  *)
+
+(* Decrypt a ciphertext [c] with the secret key [sk]: m = v * u^(-x)  *)
+
+(* Add an encoding and decoding technique to make sure that the selected messaged are in the right group *)
+
+
