@@ -1,3 +1,6 @@
+The ElGamal encryption scheme is not only the most extensively used alternative to RSA, but is also almost exclusively used in voting systems as an effective homomorphic encryption scheme. Being easily adaptable to a wide range of cryptographic groups, the ElGamal encryption scheme enjoys homomorphic properties while remaining semantically secure;
+
+
 ElGamal is an asymmetric encryption scheme that consists of three algorithms: key generation(η), η being a security parameter, encryption E(m, pk) with m being a plaintext
 and pk a public key, and decryption D(c,sk) where c is a ciphertext and sk is a private key. 
 
