@@ -18,8 +18,7 @@ We use |g| to denote the order of an element g in Zp* (cyclic prime order group)
 As if all subgroups of a cyclic group are cyclic and if G = <g> is cyclic, then for every divisor d of |G| there exists exactly one subgroup of order d which may be generated.  One may rely on this property to form a unique subgroup of quadratic residues elements.
 
 For ElGamal, using a safe prime p = 2q+1, where the order is p−1 = 2q permits to form a subgroup of prime order q that forms the message space we need in order to encrypt messages. One may take advantage of the Lagrange theorem that states that in a finite group G, the order of any subgroup H divides the order of the group, to conclude that the prime order subgroup has no subgroups being prime. Finally, the message space must be restrained to this prime order subgroup.
-  
-  Together with the interviewer we will implement in Ocaml the following functions: encryption and decryption without a secure method to link messages into the correct subgroup. Later, we will implement a secure version in which the message space is restrained to the correct subgroup.
+
   
   In the file elgamal.ml, I have already implemented the most important functions as: prime, safe price, generator, safe prime order group and key generation.
   
